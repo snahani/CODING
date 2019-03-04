@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OnMouseCoordinateEvent</title>
+</head>
+<body>
+
+    <h2 class="hd2" >
+        <span class="sp1">Click the BOX </span>
+        <br>to get the x (horizontal) and y (vertical) coordinates of the mouse pointer when it was clicked.
+    </h2>
+
+    <p>
+        <strong>Tip:</strong> Try to click different places in the BOX.
+    </p>
+
+    <p id="demo"></p>
+
+    <br><br><br>
+
+    <div class="hd2" style="width: 60%; height: 450px; position: relative; left: 20%; ;" onclick="showCoords(event)">
+
+
+    </div>
+
+<style>
+  .sp1{
+    font-size: 2em;
+    font-family: 'Arial Black';
+  }
+
+  .hd2{
+      background-color: beige;
+      height: 120px;
+      padding-top: 20px;
+      font-family: Arial;
+      padding-left: 10px;
+  }
+
+  #demo{
+      font-family: Arial;
+      font-weight: bold;
+      font-style: italic;
+      color: sienna;
+      text-align: center;
+      background-color: bisque;
+      height: 30px;
+      padding-top: 10px;
+  }
+
+</style>
+
+<script>
+    function showCoords(event) {
+        var x = event.clientX;
+        var y = event.clientY;
+        var coords = "X coords: " + x + ", Y coords: " + y;
+        document.getElementById("demo").innerHTML = coords;
+    }
+</script>
+
+</body>
+</html>

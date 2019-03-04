@@ -1,0 +1,45 @@
+<!DOCTYPE=HTML5>
+<html>
+<head>
+    <title>JetBrain</title>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="head1" >
+        XIESS Co. <span style="color:black;">Profile</span>
+    </div>
+
+
+    <div id="annRep" >
+        Annual Repport
+    </div>
+
+    <button id="btn">Ask me the Date</button>
+    <br>
+    <div id="dates"></div>
+
+    <script>
+        const head1 = document.querySelector('#head1');
+        head1.addEventListener('click', function(){
+            alert("Company's Profile it's not in HEADER SECTION !s ");
+        });
+
+        const annRep = document.querySelector("#annRep");
+        annRep.addEventListener('click', function () {
+            confirm("Are you authorized for ANNUAL REPORT? ");
+        });
+
+
+        document.getElementById("btn").addEventListener("click", displayDate);
+        function displayDate() {
+            document.getElementById("dates").innerHTML = Date();
+        }
+
+    </script>
+
+</body>
+
+</html>
